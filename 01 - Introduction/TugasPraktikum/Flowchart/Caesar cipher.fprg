@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Caesar cipher"/>
+        <attribute name="authors" value="micro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-16 12.01.53 PM"/>
+        <attribute name="created" value="bWljcm87QVNSSS1XSVJESTsyMDI1LTA0LTE2OzEwLjU2LjAxIEFNOzI1MDc="/>
+        <attribute name="edited" value="bWljcm87QVNSSS1XSVJESTsyMDI1LTA0LTE2OzEyLjAxLjUzIFBNOzQ7MjYzMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Masukkan teks&#13;&#10;"/>
+            <output expression="&quot;plaintext: &quot;" newline="False"/>
+            <input variable="HELLO"/>
+            <declare name="plain" type="String" array="False" size=""/>
+            <comment text="buat StringBuilder dengan var hasil"/>
+            <declare name="hasil" type="String" array="False" size=""/>
+            <comment text="buat variable untuk tampung key"/>
+            <output expression="&quot;key: &quot;" newline="False"/>
+            <input variable="key"/>
+            <declare name="key" type="String" array="False" size=""/>
+            <comment text="menyimpan text plain ke dalam array char"/>
+            <for variable="i" start="0" end="Panjangplaintext" direction="inc" step="1">
+                <declare name="char huruf" type="String" array="False" size=""/>
+                <assign variable="huruf" expression="plaintext.charAt(i)"/>
+                <comment text="Abaikan karakter selain A-Z"/>
+                <if expression="huruf &lt; 'A' || huruf &gt; 'Z'">
+                    <then/>
+                    <else/>
+                </if>
+                <declare name="shift" type="Integer" array="False" size=""/>
+                <comment text=" Geser berdasarkan huruf kunci"/>
+                <assign variable="shift" expression="key.charAt(j % key.length()"/>
+                <declare name="encryp" type="String" array="False" size=""/>
+                <assign variable="encryt" expression="(char) ((huruf - 'A' + shift) % 26 + 'A')"/>
+                <assign variable="hasil" expression="encryp"/>
+                <assign variable="j" expression="j++"/>
+            </for>
+            <comment text="ENCRYP"/>
+            <output expression="&quot;Encrypt: &quot;" newline="True"/>
+            <output expression="hasil" newline="True"/>
+            <comment text="DECRYPT"/>
+            <output expression="&quot;Encrypt: &quot;" newline="True"/>
+            <declare name="ciphertext" type="String" array="False" size=""/>
+            <assign variable="chipertext" expression="hasil"/>
+            <comment text="buat variable hasilDecrypt dengan tipe String builder "/>
+            <declare name="HasilDecrypt" type="String" array="False" size=""/>
+            <for variable="i,j" start="0" end="panjangPlaintext" direction="inc" step="1">
+                <declare name="huruf" type="String" array="False" size=""/>
+                <assign variable="huruf" expression="ciphertext.charAt(i)"/>
+                <comment text="abaikan selain karakter selain A-Z"/>
+                <if expression="huruf &lt; 'A' || huruf &gt; 'Z'">
+                    <then>
+                        <assign variable="hasilDecrypt" expression="+huruf"/>
+                    </then>
+                    <else/>
+                </if>
+                <declare name="shift" type="Integer" array="False" size=""/>
+                <assign variable="shift" expression="key.charAt(j % key.length()"/>
+                <declare name="decrypt" type="Integer" array="False" size=""/>
+                <assign variable="decrypt" expression="(char) ((huruf - 'A' - shift + 26) % 26 + 'A')"/>
+                <assign variable="hasilDecrypt" expression="+decrypt"/>
+                <assign variable="j" expression="j++"/>
+            </for>
+            <output expression="hasilDecrypt" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

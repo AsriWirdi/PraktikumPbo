@@ -1,0 +1,173 @@
+PRAKTIKUM 1 
+A. Indikator Penilaian :
+    1. Mahasiswa mampu menjelaskan konsep dasar pemrograman berorientasi objek
+    2. Mahasiswa mampu menjelaskan dasar pemrograman Java.
+    3. Mahasiswa mampu menggunakan berbagai tipe data primitif dan non primitif untuk membuat variable.
+    4. Mahasiswa mampu membuat operasi sederhana di dalam method main.
+    5. Mahasiswa mampu membuat class menggunakan Java.
+    6. Mahasiswa mampu membuat field dan method.
+    7. Mahasiswa mampu membuat variable di dalam class (field).
+    8. Mahasiswa mampu membuat variable di dalam method (local variable).
+    9. Mahasiswa mampu membuat variable untuk input method (parameter).
+    10. Mahasiswa mampu membuat operasi di dalam method.
+    11. Mahasiswa mampu membuat operasi conditional di dalam method.
+    12. Mahasiswa mampu membuat operasi looping di dalam method.
+    13. Mahasiswa mampu membuat input-output program melalui file dan console window.
+    14. Mahasiswa mampu menjelaskan tentang String dan Regular Expression.
+
+B. Tugas Pendahuluan
+    1. Gambarkan hubungan antara state dan behavior pada objek di dunia nyata dengan field dan method pada objek di software.
+        Jadi, kita ambil objek di dunia nyata misal objeknya Laptop,
+        Nah si laptop ini punya State (keadaan) = apa yang dimiliki.
+        - Warna = Silver
+        - Ram = 16GB
+        - Merek = Lenovo
+        - Status = Menyala atau mati
+            Nah, ini seperti filed dalam pemrograman.
+
+        Behavior (perilaku) = apa yang bisa dilakukan
+        - Menyala
+        - Dimatikan
+        - Menjalankan Aplikasi
+        - Mengisi Daya
+            Ini seperti Mehod yang ada dalam pemrograman.
+
+        OBJEK DALAM PEMROGRAMAN (CONTOH JAVA)
+
+            class Laptop{
+                // State = field
+                String merk;
+                int ram;
+                boolean menyala;
+
+                // behavior = method
+                void nyalakan(){
+                    menyala = true;
+                    System.println("Laptop dinyalakan");
+                }
+
+                void matikan(){
+                    menyala = false;
+                    System.println("Laptop dimatikan");
+                }
+
+                void jalankanAplikasi(String namaAplikasi){
+                    if(menyala){
+                        System.out.println("menjalankan " + namaAplikasi);
+                    } else {
+                        Sysetm.out.println("Laptop belum di nyalakan");
+                    }
+                }
+            }
+
+
+        PERBANDINGAN LANGSUNG :
+        _________________________________________________________
+        Dunia Nyata (objek)   |   Pemrograman(Objek Java)
+        ----------------------|----------------------------------
+        Warna, RAM, Merek     |   String warna, int ram, ...
+        Menyala, dimatikan    |   void nyalakan(), void matikan
+        Keadaan saat ini      |   boolean menyala;   
+
+
+        INTI HUBUNGANNYA : 
+        State (filed) menggambarkan kondisi/data objek saat ini.
+        sedangkan Behavior (method) menggambarkan aksi/fungsi yang bisa dilakukan oleh objek tersebut.
+
+
+    2. Tuliskan dan jelaskan tiga pilar objek oriented programing.
+        TIGA PILAR OOP DAN PENJELASANNYA :
+        1. Encapsulation (Enkapsulasi)
+            Encapsulation adalah proses membungkus data (atribut) dan fungsi (method) ke dalam satu kesatuan (class), serta menyembunyikan implementasi detail dari luar objek.
+            jadi, encapsulasi ini membungkus sebuah data dan method dengan modifier akses seperti modifier private. nah jadi, privte ini membatasi akses dari luar class. menyembunyikan implementasi detail dari luar objek
+            mengontrol bagaimana data diakses dan diubah, biasanya pakai method getter dan setter dan di publik.
+            
+        2. Inheritance (pewarisan)
+            Inheritance adalah kemampuan sebuah class mewarisi atribut dan method dari class lain. Class yang mewarisi disebut subclass atau child, sedangkan class yang di warisi disebut superclass atau parent,
+            Tujuan :
+            - Reusability (kode bisa di pakai ulang)
+            - membuat struktur program lebih efisien dan terorganisir
+
+            contoh Java : 
+                class Manusia {
+                    void makan(){
+                        System.out.println("Sedang makan...");
+                    }
+                }
+
+                class Mahasiswa extends Manusia{
+                    void belajar(){
+                        System.out.println("Sedang belajar...");
+                    }
+                }
+
+                penjelasan : Mahasiswa bisa memakai method makan() dari Manusia tanpa perlu menulis ulang.
+
+        3. Polymorphism (polimorfisme)
+            Polymorphism adalah kemampuan objek untuk memiliki banyak bentuk. Biasanya muncul dalam bentuk method overriding (di class turunan) dan method overloading (dengan parameter berbeda).
+            Tujuan :
+            - Membuat program lebih fleksibel dan mudah dikembangkan.
+            - Memungkinkan pemrosesan objek secara umum.
+
+            Conoh Java :
+                Mahasiswa {
+                    void belajar(){
+                        System.out.println("Belajar umum");
+                    }
+                }
+
+                class MahasiswaTI extends Mahasiswa {
+                    @Override
+                    void belajar(){
+                        System.out.println("Belajar coding");
+                    }
+                }
+                penjelasan : 
+                Method belajar() bisa punya perilaku berbeda tergantung objeknya (Mahasiswa atau MahasiswaTI)
+
+
+        KESIMPULAN : 
+        ___________________________________________________________
+        PILAR OOP       | FUNGSI UTAMA
+        -----------------------------------------------------------
+        Encapsulation   | Menyembunyikan data dan membatasi akses
+        Inheritance     | menggunakan kembali kode dari class lain
+        Polymorphism    | Mengizinkan objek berperilaku berbeda
+
+    
+    3. Tuliskan empat macam visibilitas yang ada dijava?
+        1. public
+            Dapat diakses dari mana saja, baik di dalam package yang sama maupun dari package lain.
+            - Cocok untuk method atau class yang perlu diakses secara luas.
+        2. private
+            - hanya bisa di akses dari dalam class itu sendiri.
+            - Tidak bisa diakses dari class lain, bahkan dalam package yang sama.
+            - untuk melindungi data agar tidak bisa di ubah secara langsung dari luar class (Encapsulation).
+        3. protected
+            - Dalam class itu sendiri
+            - Dalam class lain dalam package yang sama
+            - class turunan (subclass), meskipun dipackage berbeda.
+            - Berguna saat membuat Inheritance dan kamu ingin subclass punya akses ke field tertentu.
+        4. Default - tidak Dituliskan
+            - Disebut juga package-private
+            - Bisa diakses hanya dari class lain dalam package yang sama.
+            - Tidak bisa diakses dari luar package.
+            - Untuk komponen internal aplikasi yang tidak perlu diakses dari luar package.
+
+        
+    4. Jelaskan konsep dasar tentang class di java. 
+        class adalah blueprint (cetak biru) atau template untuk membuat objek.
+        Jadi class itu seperti cetakan, nah hasil dari cetakan itu berupa instancenya yaitu objek.
+
+    5. Tuliskan 50 keyword java. 
+        1. package
+        2. import
+        3. class
+        4. enum
+        5. interface
+        6. abstract
+        7. static
+        8. void
+        9. extends
+        10. implements
+        11. 

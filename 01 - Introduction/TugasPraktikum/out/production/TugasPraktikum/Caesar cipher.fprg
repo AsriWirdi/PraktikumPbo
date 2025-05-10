@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Caesar cipher"/>
+        <attribute name="authors" value="micro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-16 11.40.21 AM"/>
+        <attribute name="created" value="bWljcm87QVNSSS1XSVJESTsyMDI1LTA0LTE2OzEwLjU2LjAxIEFNOzI1MDc="/>
+        <attribute name="edited" value="bWljcm87QVNSSS1XSVJESTsyMDI1LTA0LTE2OzExLjQwLjIxIEFNOzI7MjYxMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Masukkan teks&#13;&#10;"/>
+            <declare name="plain" type="String" array="False" size=""/>
+            <input variable=""/>
+            <comment text="Masukkan geser:"/>
+            <declare name="geser" type="Integer" array="False" size=""/>
+            <input variable=""/>
+            <comment text="menyimpan perhuruf String plain ke dalam array String"/>
+            <declare name="hurufChar" type="String" array="True" size="plain"/>
+            <comment text="menyimpan text plain ke dalam array char"/>
+            <declare name="hurufChar" type="String" array="True" size="plain"/>
+            <comment text="panjang plain"/>
+            <assign variable="lengthHurufStr" expression="plain.length()"/>
+            <for variable="i" start="0" end="lengthHurufStr" direction="inc" step="1">
+                <comment text=" hurufChar[i] = hurufStr[i].charAt(0);"/>
+                <declare name="enrypt" type="Integer" array="True" size="plain"/>
+            </for>
+            <comment text="Encrypt"/>
+            <comment text="buat variable encrypt bertipe char array dengan size panjang array hurufChar.length"/>
+            <declare name="encrypt" type="String" array="True" size="hurufChar"/>
+            <for variable="i" start="0" end="lengthHurufStr" direction="inc" step="1">
+                <if expression="hurufChar[i] &gt;= 65 &amp;&amp; hurufChar[i] &lt;= 90">
+                    <then>
+                        <assign variable="encrypt" expression="(char) ((hurufChar[i] + geser))"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <comment text="TAMPILKAN ENCRYPT"/>
+            <output expression="&quot;Encrypt: &quot;" newline="True"/>
+            <for variable="i" start="0" end="lengthHurufStr" direction="inc" step="1">
+                <output expression="encrypt[i]" newline="False"/>
+            </for>
+            <output expression="println()" newline="True"/>
+            <comment text="TAMPILKAN DECRIPT"/>
+            <declare name="decrypt" type="String" array="True" size="lengthHurufStr"/>
+            <for variable="i" start="0" end="lengthHurufStr" direction="inc" step="1">
+                <if expression="hurufChar[i] &gt;= 65 &amp;&amp; hurufChar[i] &lt;= 90">
+                    <then>
+                        <assign variable="decrypt" expression="(char) ((encrypt[i] - geser)"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Decrypt: &quot;" newline="True"/>
+            <for variable="i" start="0" end="lengtHurufStr" direction="inc" step="1">
+                <output expression="decrypt[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
