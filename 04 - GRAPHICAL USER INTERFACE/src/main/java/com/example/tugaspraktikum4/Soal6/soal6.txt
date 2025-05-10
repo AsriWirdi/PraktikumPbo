@@ -1,0 +1,4 @@
+Buatlah program GUI java untuk game snake, puzzle, breakout, tetris,
+pacman, sokoban, dan space invaders. Referensi dapat dilihat pada situs
+https://zetcode.com/javagames/ gunakan kreatifitas semaksimal mungkin
+untuk memodifikasi game tersebut.

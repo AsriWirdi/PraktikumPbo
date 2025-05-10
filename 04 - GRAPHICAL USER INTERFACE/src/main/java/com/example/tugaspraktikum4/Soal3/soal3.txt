@@ -1,0 +1,2 @@
+Buatlah program GUI Java untuk mengkonversi nilai Mata Kuliah dari Nilai
+Angka (interval 0-100) ke Nilai Huruf (A, A-, B+, B, B-, C, D, E) dan sebaliknya
