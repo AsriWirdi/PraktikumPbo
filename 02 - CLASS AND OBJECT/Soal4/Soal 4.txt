@@ -1,0 +1,6 @@
+4. Buatlah sebuah class yang di dalamnya terdapat static field dan static
+   method lalu kemudian buatlah sebuah class main untuk
+   menggunakan/memanggil static field dan static method yang telah dibuat
+   tanpa melakukan operasi instan class (tanpa menggunkan keyword new).
+   Sampai disini apa yang telah anda pelajari tentang static? Tuliskan jawaban
+   anda tentang static ini di bagian akhir jawaban soal nomor 4.

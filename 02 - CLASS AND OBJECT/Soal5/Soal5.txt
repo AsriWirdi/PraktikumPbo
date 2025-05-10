@@ -1,0 +1,11 @@
+5. Tulis kembali class Kotak yang kita buat di Teori Pendukung Praktikum ini.
+   Buatlah sebuah ArrayList bertipe Generik dari class Kotak ini.
+   Tambahkan/masukkan beberapa object Kotak ke dalam ArrrayList (object
+   object kotak yang telah dibuat akan dimasukkan ke dalam object arrayList).
+   Jadi nanti object arrayList akan berisi beberapa object kotak. Kemudian
+   lakukan pemanggilan method yang ada di object kotak tetapi pemanggilan
+   tersebut dilakukan dengan cara memanggil object arrayList terlebih dahulu
+   (tidak dipanggil secara langsung dari object kotak-nya). Yang dimaksud
+   pemanggilan method secara langsung dari object kotak itu seperti ini:
+   kotak1.setPanjang(12); bukan seperti ini yang harus dilakukan, tetapi
+   seharusnya arrayList.get(8).setPanjang(12);

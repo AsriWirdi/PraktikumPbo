@@ -1,0 +1,4 @@
+6. Buatlah sebuah class Main kemudian di dalam class tersebut buatlah
+   sebuah method main( ) dan sebuah method recursif non-static untuk
+   menampilkan bilangan fibonacci ke-n. kemudian panggil method recursif
+   tersebut dari dalam method main yang telah kita buat.

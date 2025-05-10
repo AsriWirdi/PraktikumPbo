@@ -1,0 +1,5 @@
+2. Buat 20 class Main (nama filenya tidak harus persis Main.java), lalu dari
+method main class tersebut buat masing-masing 30 object dari 20 class
+yang telah dibuat pada tugas nomor 1 (jadi nanti kita akan punya 600 object
+hasil instan). Selanjutnya lakukan pemanggilan method-method yang ada
+di object hasil instan.

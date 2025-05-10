@@ -1,0 +1,5 @@
+3. Buatlah sebuah class yang di dalamnya terdapat beberapa inner class
+(lengkap dengan field dan method di dalamnya), kemudian buatlah class
+Main yang di dalamnya terdapat method main berisi operasi instan object
+dari masing-masing inner class yang telah dibuat. Lakukan pemanggilan
+method yang ada di object hasil instan dari inner class.

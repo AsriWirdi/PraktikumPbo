@@ -1,0 +1,1 @@
+10. Buat sebuah method class Main berisi method main( ) untuk membuat instan dari semua subclass yang telah dibuat pada nomor 8.

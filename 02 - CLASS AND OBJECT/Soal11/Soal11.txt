@@ -1,0 +1,10 @@
+11. Buatlah sebuah class bernama ImageProcessing. Di dalam class
+    ImageProcessing tersebut buatlah sebuah field bertipe array int tiga
+    dimensi untuk menyimpan nilai pixel R,G, dan B. tambahkan pula sebuah
+    method imgToGray( ) di dalam class ImageProcessing output dari method
+    imgToGray( ) adalah array bertipe int dua dimensi yang akan berisi hasil
+    grayscale dari image RGB. Lengkapi class ImageProcessing dengan
+    constructor, method toString( ) serta method getter dan setter. Selanjutnya
+    buatlah sebuah method main( ) di class berbeda, kemudian panggil semua
+    member class yang ada di class ImageProcessing. Gunakan data dummy
+    untuk mensimulasikan data RGB.

@@ -1,0 +1,6 @@
+7. Buatlah sebanyak 10 superclass yang nantinya siap diturunkan ke subclass.
+   Trik untuk membuat superclass adalah dengan melakukan generalisasi,
+   misalnya untuk class-class PersegiPanjang, Persegi, Lingkaran, Trapesium,
+   Segitiga kita dapat mebuat sebuah generalisasi yaitu BangunDatar. Maka
+   class BangunDatar ini nanti bisa menjadi superclass untuk class-class
+   PersegiPanjang, Persegi, Lingkaran, Trapesium, dan Segitiga.
