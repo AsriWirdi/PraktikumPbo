@@ -1,0 +1,3 @@
+Buatlah program animasi sederhana menggunakan dua cara berbeda: 1) 
+dengan cara melakukan extends terhadap class java.lang.Thread. 2) dengan 
+cara java.lang.Runnable. melakukan implements terhadap interface
