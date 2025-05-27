@@ -1,0 +1,5 @@
+Buatlah lima buah class Queue (empat variasi class Queue) menggunakan
+basis struktur data berbeda: array, vector, ArrayList dan LinkedList. Jangan
+lupa untuk menerapkan FIFO. Lengkapi semua class Queue yang anda buat
+dengan method: peek( ), offer( ), poll( ), empty( ), toString( ). Buatlah sebuah
+class Main untuk menguji semua class Queue yang telah dibuat.

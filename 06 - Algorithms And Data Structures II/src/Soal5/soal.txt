@@ -1,0 +1,5 @@
+Buatlah lima buah class Stack (empat variasi class Stack) menggunakan
+basis struktur data berbeda: array, vector, ArrayList dan LinkedList. Jangan
+lupa untuk menerapkan LIFO. Lengkapi semua class Stack yang anda buat
+dengan method: peek( ), push( ), pop( ), empty( ), toString( ). Buatlah sebuah
+class Main untuk menguji semua class Stack yang telah dibuat.

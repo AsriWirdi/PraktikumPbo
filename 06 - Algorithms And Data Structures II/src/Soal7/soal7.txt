@@ -1,0 +1,5 @@
+Buatlah source code untuk menyimpan struktur di bawah ini menjadi
+struktur graph dengan bantuan Array Adjacency. Nilai 1  akan digunakan
+sebagai penanda vertex yang saling terhubung (adjacent), sedangkan
+untuk yang tidak terhubung secara langsung akan diberi nilai 0. Hubungan
+vertex ke dirinya sendiri juga ditandai dengan nilai 0.
